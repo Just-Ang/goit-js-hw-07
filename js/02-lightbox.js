@@ -1,6 +1,7 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
+
 console.log(galleryItems);
 
 const galleryEl = document.querySelector(".gallery");
@@ -21,12 +22,7 @@ const items = galleryItems
 
 galleryEl.innerHTML = items;
 
-galleryEl.addEventListener("click", selectImg);
 
-function selectImg(event) {
-  if (event.target.nodeName !== "IMG") {
-    return;
-  }
   var lightbox = new SimpleLightbox(".gallery a", {
     captionSelector: "img",
     captionsData: "alt",
@@ -34,4 +30,3 @@ function selectImg(event) {
     captionDelay: 250,
     scrollZoom: false,
   });
-}
